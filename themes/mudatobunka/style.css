@@ -8,3 +8,7 @@ Version: 0.0.1
 Tags: muda, bunka
 Text Domain: mudatobunka
 */
+
+@import "css/normalize.css";
+@import "css/github.css";
+@import "css/style.css";

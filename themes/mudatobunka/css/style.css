@@ -1,0 +1,207 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+
+body
+{
+    font-size: 18px;
+
+    padding: 1px 0;
+
+    color: #222;
+    background: #fcf9f0;
+}
+
+.container
+{
+    width: 840px;
+    margin: 0 auto;
+    padding: 0 1px;
+}
+
+.header
+{
+    padding: 34px 0 50px;
+
+    text-align: center;
+}
+.header .unit
+{
+    margin-bottom: 30px;
+}
+.header .unit a
+{
+    display: inline-block;
+
+    transition: all 120ms linear 0;
+    text-decoration: none;
+
+    color: #222;
+
+    *display: inline;
+    *zoom: 1;
+}
+.header .unit a:hover
+{
+    opacity: .6;
+    filter: alpha(opacity=60);
+}
+.header h1
+{
+    overflow: hidden;
+
+    width: 230px;
+    height: 40px;
+    margin: 0 auto 4px;
+
+    white-space: nowrap;
+    text-indent: 110%;
+
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100%;
+}
+.header .subtitle
+{
+    margin: 0;
+}
+
+.gnav
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+.gnav li
+{
+    display: inline-block;
+
+    margin: 0 16px;
+
+    *display: inline;
+    *zoom: 1;
+}
+
+.wrapper
+{
+    margin-bottom: 60px;
+}
+
+.main
+{
+    float: right;
+
+    width: 680px;
+}
+
+.side
+{
+    float: left;
+
+    width: 140px;
+}
+
+.unit-article
+{
+    *zoom: 1;
+}
+.unit-article header
+{
+    margin-bottom: 36px;
+}
+.unit-article h2
+{
+    font-size: 24px;
+
+    margin: 0;
+}
+.unit-article:after
+{
+    font-size: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '';
+}
+
+.unit-article-body p
+{
+    line-height: 1.7;
+
+    margin: 0 0 1.4em;
+}
+.unit-article-body p:last-child
+{
+    margin-bottom: 0;
+}
+.unit-article-body pre
+{
+    margin: 0 0 1.4em;
+}
+.unit-article-body pre:last-child
+{
+    margin-bottom: 0;
+}
+.unit-article-body pre code
+{
+    font-family: 'Source Code Pro', monospace;
+    line-height: 1.3;
+
+    display: block;
+
+    margin: 0;
+    padding: 9px 12px;
+    padding: .6rem .8rem;
+
+    border: 1px #999 solid;
+    border-radius: 4px;
+    background: #fdfdfd;
+}
+
+.unit-article-post-date
+{
+    line-height: 1.7;
+
+    color: #666;
+}
+
+.footer
+{
+    padding: 24px 0;
+
+    text-align: center;
+}
+.footer .gnav
+{
+    margin-bottom: 20px;
+}
+
+.copyright
+{
+    font-size: 12px;
+    font-size: .8rem;
+    font-style: normal;
+
+    color: #666;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active
+{
+    text-decoration: none;
+
+    color: #2c819b;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+a:hover .fa
+{
+    text-decoration: underline;
+}
