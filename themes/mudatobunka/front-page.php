@@ -1,30 +1,10 @@
 <!doctype html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>無駄と文化</title>
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-<?php wp_head(); ?>
-</head>
+<?php get_template_part('views/elements/head'); ?>
+
 <body <?php body_class(); ?>>
 <div class="container">
 
-<header class="header">
-  <div class="unit">
-    <a href="<?php echo home_url(); ?>">
-      <h1><?php bloginfo('name'); ?></h1>
-      <p class="subtitle">実用的ブログ</p>
-    </a>
-  </div><!-- //.unit -->
-  <ul class="gnav">
-    <li><a href="<?php echo home_url('/about/'); ?>">ABOUT</a></li>
-    <li><a href="<?php echo home_url(); ?>">ARCHIVE</a></li>
-    <li><a href="" target="_blank"><i class="fa fa-twitter" title="Twitter"></i></a></li>
-    <li><a href="" target="_blank"><i class="fa fa-instagram" title="Instagram"></i></a></li>
-    <li><a href="" target="_blank"><i class="fa fa-tumblr-square" title="Tumblr"></i></a></li>
-  </ul>
-</header>
+<?php get_template_part('views/elements/header'); ?>
 
 <div class="wrapper">
 <?php
@@ -79,21 +59,11 @@ endif;
 ?>
 </div><!-- //.wrapper -->
 
-<footer class="footer">
-  <ul class="gnav">
-    <li><a href="<?php echo home_url('/about/'); ?>">ABOUT</a></li>
-    <li><a href="<?php echo home_url(); ?>">ARCHIVE</a></li>
-    <li><a href="" target="_blank"><i class="fa fa-twitter" title="Twitter"></i></a></li>
-    <li><a href="" target="_blank"><i class="fa fa-instagram" title="Instagram"></i></a></li>
-    <li><a href="" target="_blank"><i class="fa fa-tumblr-square" title="Tumblr"></i></a></li>
-  </ul>
-  <address class="copyright">&copy 2015 Mitsui.</address>
-</footer>
+<?php get_template_part('views/elements/footer'); ?>
 
 </div><!-- //.container -->
 
-<script src="<?php bloginfo('template_url'); ?>/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<?php get_template_part('views/elements/script'); ?>
 
 <?php wp_footer(); ?>
 </body>
