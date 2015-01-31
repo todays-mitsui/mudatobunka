@@ -37,6 +37,15 @@ if (have_posts()) :
       <header>
         <h2><?php the_title(); ?></h2>
       </header>
+<?php
+    if (has_post_thumbnail()) :
+?>
+      <div class="unit-article-eyecatch">
+        <?php the_post_thumbnail_bg('eyecatch'); ?>
+      </div><!-- //.unit-article-eyecatch -->
+<?php
+    endif;
+?>
       <div class="unit-article-body">
 <?php
     the_content();

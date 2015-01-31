@@ -37,6 +37,15 @@ if (have_posts()) :
       <header>
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       </header>
+<?php
+    if (has_post_thumbnail()) :
+?>
+      <div class="unit-article-eyecatch">
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail_bg('eyecatch'); ?></a>
+      </div><!-- //.unit-article-eyecatch -->
+<?php
+    endif;
+?>
       <div class="unit-article-excerpt">
 <?php
     the_excerpt();
