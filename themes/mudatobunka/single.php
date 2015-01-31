@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>無駄と文化</title>
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<title>無駄と文化</title>
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<?php wp_head(); ?>
 </head>
 <body>
 <div class="container">
 
 <header class="header">
   <div class="unit">
-    <a href="/">
+    <a href="<?php echo home_url(); ?>">
       <h1><?php bloginfo('name'); ?></h1>
       <p class="subtitle">実用的ブログ</p>
     </a>
@@ -61,5 +62,7 @@
 
 <script src="js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+
+<?php wp_footer(); ?>
 </body>
 </html>
