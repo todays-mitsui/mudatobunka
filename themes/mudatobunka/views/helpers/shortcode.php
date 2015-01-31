@@ -1,4 +1,6 @@
 <?php
+
+// heighlight.jsに対応した形でソースコードを挿入するためのショートコード
 function wrapCode($attrs, $content=null) {
   extract(shortcode_atts(array(
     'lang' => ''

@@ -61,10 +61,15 @@ body
 .unit-article
   header
     margin-bottom: 36px
+    .single &
+      margin-bottom: 36px
+    .home &
+      margin-bottom: 12px
   h2
     margin: 0
     font-size: 24px
   +clearfix
+
 
 .unit-article-body
   p
@@ -89,6 +94,13 @@ body
 .unit-article-post-date
   color: $gray
   line-height: 1.7
+
+.unit-article-excerpt
+  p
+    display: inline
+  .unit-article-readmore
+    +inline-block
+    margin: 0
 
 
 .footer
