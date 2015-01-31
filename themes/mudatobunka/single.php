@@ -27,24 +27,46 @@
 </header>
 
 <div class="wrapper">
+<?php
+if (have_posts()) :
+  while (have_posts()) :
+    the_post();
+?>
   <article class="unit-article">
     <section class="main">
       <header>
-        <h2>HTML5における空の値の属性</h2>
+        <h2><?php the_title(); ?></h2>
       </header>
       <div class="unit-article-body">
-        <p>属性に空の値を指定する時は、例えばalt=""などと書く。実は仕様のHTML文法にはもうひとつ書き方が用意されており、それはaltとのみ書くという形のものだ。確かにこう書けるし、真偽値を取る属性で属性のみ書く方法もこの文法規定がベースになっている。少し前に読んだalt属性の書き方ガイドといったような記事ではそのように触れられている。しかし僕は属性のみを書くのは真偽値を取る属性のみに限定した方が良いように考えている。</p>
-        <p>属性に空の値を指定する時は、例えばalt=""などと書く。実は仕様のHTML文法にはもうひとつ書き方が用意されており、それはaltとのみ書くという形のものだ。確かにこう書けるし、真偽値を取る属性で属性のみ書く方法もこの文法規定がベースになっている。少し前に読んだalt属性の書き方ガイドといったような記事ではそのように触れられている。しかし僕は属性のみを書くのは真偽値を取る属性のみに限定した方が良いように考えている。</p>
-<pre><code class="javascript">jQuery(function($) {
-  console.log('Hello,world!');
-});</code></pre>        
-        <p>属性に空の値を指定する時は、例えばalt=""などと書く。実は仕様のHTML文法にはもうひとつ書き方が用意されており、それはaltとのみ書くという形のものだ。確かにこう書けるし、真偽値を取る属性で属性のみ書く方法もこの文法規定がベースになっている。少し前に読んだalt属性の書き方ガイドといったような記事ではそのように触れられている。しかし僕は属性のみを書くのは真偽値を取る属性のみに限定した方が良いように考えている。</p>
+<?php
+    the_content();
+?>
       </div><!-- //.article-body -->
     </section><!-- //.main -->
     <aside class="side">
-      <time class="unit-article-post-date" datetime="2011-03-09">2011-03-09</time>
+      <time class="unit-article-post-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
     </aside><!-- //.side -->
-  </article>
+  </article><!-- //.unit-article -->
+<?php
+  endwhile;
+else :
+?>
+   <article class="unit-article">
+    <section class="main">
+      <header>
+        <h2>記事はありません</h2>
+      </header>
+      <div class="unit-article-body">
+        <p>お探しの記事は見つかりませんでした。</p>
+      </div><!-- //.article-body -->
+    </section><!-- //.main -->
+    <aside class="side">
+      <time class="unit-article-post-date">0000-00-00</time>
+    </aside><!-- //.side -->
+  </article><!-- //.unit-article -->
+<?php
+endif;
+?>
 </div><!-- //.wrapper -->
 
 <footer class="footer">
