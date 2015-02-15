@@ -1,0 +1,25 @@
+=clearfix
+  *zoom: 1
+  &:after
+    content: ''
+    display: block
+    height: 0
+    visibility: hidden
+    font-size: 0
+    clear: both
+
+=ellipsis
+  white-space: nowrap
+  overflow: hidden
+  -o-text-overflow: ellipsis
+  text-overflow: ellipsis
+
+=hidden-text
+  white-space: nowrap
+  overflow: hidden
+  text-indent: 110%
+
+=inline-block
+  display: inline-block
+  *display: inline
+  *zoom: 1
