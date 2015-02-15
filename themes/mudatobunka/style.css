@@ -9,6 +9,8 @@ Tags: muda, bunka
 Text Domain: mudatobunka
 */
 
+@charset "UTF-8";
+
 @import "css/normalize.css";
 @import "css/github.css";
 @import "css/style.css";

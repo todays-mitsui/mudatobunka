@@ -1,3 +1,5 @@
+@charset "UTF-8"
+
 @import "_util"
 
 $black: #222
@@ -9,7 +11,7 @@ body
   padding: 1px 0
   background: #fcf9f0
   color: $black
-  font-size: 18px
+  font-size: 16px
 
 .container
   width: 840px
@@ -50,9 +52,10 @@ body
 .wrapper
   margin-bottom: 60px
 
-.main
-  float: right
-  width: 680px
+.home, .single
+  .main
+    float: right
+    width: 680px
 
 .side
   float: left
@@ -69,6 +72,8 @@ body
   h2
     margin: 0
     font-size: 24px
+  h3
+    margin: .2em 0 .4em
   +clearfix
 
 
@@ -81,13 +86,16 @@ body
 
 .unit-article-eyecatch-frame
   +inline-block
-  width: 680px
-  height: 380px
   background-repeat: no-repeat
   border-radius: 4px
+  .page &
+    width:  840px
+    height: 400px
   .single &
+    width: 680px
     height: 380px
   .home &
+    width: 680px
     $h: 60px
     height: $h
     background-position: 0 (-(380px - $h)*.5)
@@ -99,6 +107,9 @@ body
       opacity: 1
 
 .unit-article-body
+  .page &
+    width: 680px
+    margin: 0 auto
   p
     margin: 0 0 1.4em
     line-height: 1.7

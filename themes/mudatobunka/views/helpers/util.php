@@ -12,6 +12,7 @@ add_theme_support('post-thumbnails');
 
 // カスタムサムネイル画像のサイズの設定
 add_image_size('eyecatch', 680, 380, true);
+add_image_size('large-eyecatch', 840, 400, true);
 
 // サムネイル画像をbackground-imageとして配置
 function the_post_thumbnail_bg($size=null, $set_width_and_height=false){
