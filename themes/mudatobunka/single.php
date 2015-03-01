@@ -35,6 +35,7 @@ if (have_posts()) :
     remove_filter('the_content', 'wpautop');
     the_content();
 ?>
+
       </div><!-- //.article-body -->
     </section><!-- //.main -->
   </article><!-- //.unit-article -->

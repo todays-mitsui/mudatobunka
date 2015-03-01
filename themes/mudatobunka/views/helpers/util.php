@@ -54,11 +54,7 @@ add_action('wp_footer', 'analytics');
 
 // descriptionを吐き出し
 function the_description() {
-  if (is_front_page()) {
-    $description = get_bloginfo('description');
-  } else {
-    $description = the_excerpt();
-  }
+  $description = get_bloginfo('description');
   echo $description;
 }
 
