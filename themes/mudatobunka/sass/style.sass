@@ -136,28 +136,32 @@ body
 
 @media (max-width: 680px)
   .unit-article-eyecatch
+    position: relative
+    width: 100%
+    height: 0
+    margin: 0 (-$side-padding) 10px
     text-align: center
-    margin: 0 (-$side-padding) 10px 
     .single &
       margin-bottom: 10px
+      padding-bottom: 55.88%
     .home &
       margin-bottom: 4px
+      padding-bottom: 32%
+    .page &
+      padding-bottom: 47.62%
 
   .unit-article-eyecatch-frame.unit-article-eyecatch-frame
+    position: absolute
+    top: 0
+    left: 0
     +inline-block
+    width: 100%
+    height: 100%
     background-repeat: no-repeat
     border-radius: 4px
-    width: 100vmin
     background-size: 100% auto
     .home &
-      height: 32vmin
-      background-position: 0 -11.94vmin
-    .single &
-      height: 55.88vmin
-      background-position: 0
-    .page &
-      height: 47.62vmin
-      background-position: 0
+      background-position: center center
 
 
 .unit-article-body
