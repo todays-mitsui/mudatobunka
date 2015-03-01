@@ -13,6 +13,10 @@ if (have_posts()) :
     the_post();
 ?>
   <article class="unit-article">
+    <aside class="side">
+      <time class="unit-article-post-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
+    </aside><!-- //.side -->
+
     <section class="main">
       <header>
         <h2><?php the_title(); ?></h2>
@@ -28,13 +32,11 @@ if (have_posts()) :
 ?>
       <div class="unit-article-body">
 <?php
+    remove_filter('the_content', 'wpautop');
     the_content();
 ?>
       </div><!-- //.article-body -->
     </section><!-- //.main -->
-    <aside class="side">
-      <time class="unit-article-post-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
-    </aside><!-- //.side -->
   </article><!-- //.unit-article -->
 <?php
   endwhile;
