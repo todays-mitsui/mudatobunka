@@ -43,6 +43,9 @@ if (have_posts()) :
 else :
 ?>
    <article class="unit-article">
+    <aside class="side">
+      <time class="unit-article-post-date">0000-00-00</time>
+    </aside><!-- //.side -->
     <section class="main">
       <header>
         <h2>記事はありません</h2>
@@ -51,9 +54,6 @@ else :
         <p>お探しの記事は見つかりませんでした。</p>
       </div><!-- //.article-body -->
     </section><!-- //.main -->
-    <aside class="side">
-      <time class="unit-article-post-date">0000-00-00</time>
-    </aside><!-- //.side -->
   </article><!-- //.unit-article -->
 <?php
 endif;

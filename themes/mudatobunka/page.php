@@ -44,9 +44,6 @@ else :
         <p>お探しの記事は見つかりませんでした。</p>
       </div><!-- //.article-body -->
     </section><!-- //.main -->
-    <aside class="side">
-      <time class="unit-article-post-date">0000-00-00</time>
-    </aside><!-- //.side -->
   </article><!-- //.unit-article -->
 <?php
 endif;
