@@ -1,7 +1,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="<?php the_description(); ?>">
 <meta name="keywords" content="">
 <meta content="website" property="og:type">
