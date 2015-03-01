@@ -203,6 +203,11 @@ body {
 
     filter: alpha(opacity=100);
   }
+
+  .page .unit-article-body {
+    width: 680px;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 680px) {
   .unit-article-eyecatch {
@@ -244,10 +249,6 @@ body {
 
     background-position: 0;
   }
-}
-.page .unit-article-body {
-  width: 680px;
-  margin: 0 auto;
 }
 .unit-article-body p {
   line-height: 1.7;
