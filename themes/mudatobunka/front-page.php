@@ -13,6 +13,10 @@ if (have_posts()) :
     the_post();
 ?>
   <article class="unit-article">
+    <aside class="side">
+      <time class="unit-article-post-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
+    </aside><!-- //.side -->
+
     <section class="main">
       <header>
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -33,9 +37,6 @@ if (have_posts()) :
         <p class="unit-article-readmore"><a href="<?php the_permalink(); ?>">READ MORE</a></p>
       </div><!-- //.article-body -->
     </section><!-- //.main -->
-    <aside class="side">
-      <time class="unit-article-post-date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
-    </aside><!-- //.side -->
   </article><!-- //.unit-article -->
 <?php
   endwhile;

@@ -42,18 +42,33 @@ EOS;
   echo "${html}\n";
 }
 
-/*
-// 同上(過激派)
-function post_thumbnail_custom_attribute($html, $post_id, $post_image_id){
-  $thumbnail_src    = wp_get_attachment_image_src($post_image_id);
-  $thumbnail_url    = $thumbnail_src[0];
-  $thumbnail_width  = $thumbnail_src[1];
-  $thumbnail_height = $thumbnail_src[2];
-
-  $html = <<<EOS
-<span class="unit-article-eyecatch-frame" style="${width_and_height}background-image:url(${thumbnail_url});text-indent:101%;white-space:nowrap;overflow:hidden;" data-width="${thumbnail_width}" data-height="${thumbnail_height}">thumbnail-image: ${thumbnail_name}</span>
-EOS;
-  return $html;
+// フッターにGoogleアナリティクスタグ読み込みのための<script>を追加
+function analytics() {
+  if (is_user_logged_in()) {
+    $template_directory = get_template_directory_uri();
+    echo "<script src=\"${template_directory}/js/analytics.js\"></script>";
+  }
 }
-add_filter('post_thumbnail_html', 'post_thumbnail_custom_attribute', 10, 3);
-*/
+add_action('wp_footer', 'analytics');
+
+
+// descriptionを吐き出し
+function the_description() {
+  if (is_front_page()) {
+    $description = get_bloginfo('description');
+  } else {
+    $description = the_excerpt();
+  }
+  echo $description;
+}
+
+// og:imageを吐き出し
+function the_og_image() {
+  if (is_front_page() || !has_post_thumbnail()) {
+    $template_directory = get_template_directory_uri();
+    $img_src = "${template_directory}/screenshot.png";
+  } else {
+    $img_src = wp_get_attachment_url(get_post_thumbnail_id());
+  }
+  echo $img_src;
+}
