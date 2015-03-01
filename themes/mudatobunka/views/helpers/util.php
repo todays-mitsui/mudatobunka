@@ -50,3 +50,25 @@ function analytics() {
   }
 }
 add_action('wp_footer', 'analytics');
+
+
+// descriptionを吐き出し
+function the_description() {
+  if (is_front_page()) {
+    $description = get_bloginfo('description');
+  } else {
+    $description = the_excerpt();
+  }
+  echo $description;
+}
+
+// og:imageを吐き出し
+function the_og_image() {
+  if (is_front_page() || !has_post_thumbnail()) {
+    $template_directory = get_template_directory_uri();
+    $img_src = "${template_directory}/screenshot.png";
+  } else {
+    $img_src = wp_get_attachment_url(get_post_thumbnail_id());
+  }
+  echo $img_src;
+}
