@@ -5,6 +5,8 @@
 $black: #222
 $gray: #666
 
+$side-padding: 10px
+
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700)
 
 body
@@ -79,7 +81,7 @@ body
 @media (max-width: 680px)
   .wrapper
     margin-bottom: 30px
-    padding: 0 10px
+    padding: 0 $side-padding
   .main, .side
     width: 100%
  
@@ -131,7 +133,7 @@ body
 @media (max-width: 680px)
   .unit-article-eyecatch
     text-align: center
-    margin: 0 -10px 10px 
+    margin: 0 (-$side-padding) 10px 
     .single &
       margin-bottom: 10px
     .home &
@@ -148,6 +150,9 @@ body
       background-position: 0 -11.94vmin
     .single &
       height: 55.88vmin
+      background-position: 0
+    .page &
+      height: 47.62vmin
       background-position: 0
 
 
@@ -207,6 +212,8 @@ body
     padding: 20px 0
     .unit
       margin-bottom: 10px
+    .subtitle
+      font-size: 12px
     h1
       $w: 160px
       width: $w

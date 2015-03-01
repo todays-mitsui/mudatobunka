@@ -239,6 +239,11 @@ body {
 
     background-position: 0;
   }
+  .page .unit-article-eyecatch-frame.unit-article-eyecatch-frame {
+    height: 47.62vmin;
+
+    background-position: 0;
+  }
 }
 .page .unit-article-body {
   width: 680px;
@@ -322,6 +327,9 @@ body {
   }
   .header .unit {
     margin-bottom: 10px;
+  }
+  .header .subtitle {
+    font-size: 12px;
   }
   .header h1 {
     width: 160px;
