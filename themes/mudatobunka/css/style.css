@@ -339,6 +339,7 @@ a:hover img {
   }
 
   .container {
+    box-sizing: border-box;
     width: 100%;
   }
 
