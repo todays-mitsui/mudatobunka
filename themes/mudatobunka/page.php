@@ -25,7 +25,6 @@ if (have_posts()) :
 ?>
       <div class="unit-article-body">
 <?php
-    remove_filter('the_content', 'wpautop');
     the_content();
 ?>
 
