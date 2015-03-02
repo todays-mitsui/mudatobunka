@@ -6,7 +6,7 @@
 $black: #222
 $gray: #666
 
-$side-padding: 3.125%
+$side-padding: 10px
 
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700)
 
@@ -83,12 +83,13 @@ body
 @media (max-width: 680px)
   .wrapper
     margin-bottom: 30px
-    padding: 0 $side-padding
   .main, .side
     width: 100%
  
   .unit-article
     margin-bottom: 12px
+    .side, header, .unit-article-body
+      padding: 0 $side-padding
     header
       margin-bottom: 6px
       .single &
@@ -137,9 +138,9 @@ body
 @media (max-width: 680px)
   .unit-article-eyecatch
     position: relative
-    width: 106.666666%
+    width: 100%
     height: 0
-    margin: 0 -3.333333% 10px
+    overflow: hidden
     .single &
       margin-bottom: 10px
       padding-bottom: 55.88%
@@ -227,7 +228,6 @@ body
     font-size: 14px
   .container 
     width: 100%
-    padding: 0
   .header
     padding: 20px 0
     .unit
