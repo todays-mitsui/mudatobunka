@@ -44,7 +44,7 @@ EOS;
 
 // フッターにGoogleアナリティクスタグ読み込みのための<script>を追加
 function analytics() {
-  if (is_user_logged_in()) {
+  if (!is_user_logged_in()) {
     $template_directory = get_template_directory_uri();
     echo "<script src=\"${template_directory}/js/analytics.js\"></script>";
   }
